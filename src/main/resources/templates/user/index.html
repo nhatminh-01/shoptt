@@ -1,0 +1,93 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    <!-- <script src="js/category.js"></script> -->
+
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+    <script type="text/javascript" th:src="@{/js/link.js}"></script>
+    <script type="text/javascript" th:src="@{/js/menu.js}"></script>
+    <script type="text/javascript" th:src="@{/js/product.js}"></script>
+
+    <script>
+        window.onload = function(){
+            loadMenu();
+            loadFooter();
+            loadNewProduct(0);
+            // loadCategoryHeader();
+        }
+    </script>
+</head>
+<body>
+<!-- menu -->
+<div id="menu"></div>
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img style="height: 500px;" src="https://iso.500px.com/wp-content/uploads/2015/10/lohi_cover.jpeg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img style="height: 500px;" src="https://drscdn.500px.org/photo/76564893/q%3D80_m%3D1500/v2?sig=c8b364eb3f8e4ebe432bb31dc2c55b65c6eb0e87888340dd3dda4ba1703832d0" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img style="height: 500px;" src="https://iso.500px.com/wp-content/uploads/2016/03/stock-photo-145799695.jpg" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div class="content">
+    <div class="">
+        <ul id="myTab" role="tablist">
+            <li class="nav-item tab-li" role="presentation">
+                <button style="color: #606060;" onclick="checkSpMơi()" class="active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">SẢN PHẨM CHO THUÊ NỔI BẬT</button>
+            </li>
+        </ul>
+        <div class="tab-content accordion" id="myTabContent">
+            <div class="tab-pane fade show active accordion-item" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                <div class="row">
+                    <div class="col-md-10 list-item row" id="listNewProduct">
+
+                    </div>
+                    <div class="col-md-12">
+                        <div class="paginationss">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination" id="listpage">
+                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- footer -->
+<div id="footer"></div>
+</body>
+
+<script type="text/javascript">
+    // swal("Thông báo", "Đã thêm sản phẩm vào giỏ hàng!", "success");
+</script>
+</html>
