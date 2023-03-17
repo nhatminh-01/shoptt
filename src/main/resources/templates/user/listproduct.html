@@ -28,9 +28,37 @@
 <body>
 <!-- menu -->
 <div id="menu"></div>
-<div class="content">
+<div class="content" >
     <div class="container">
+
         <div class="row">
+            <div class="container">
+                <div class="row">
+            <div class="shop-page-title ">
+                <div class="page-title-inner">
+                       <nav class="woocommerce-breadcrumb breadcrumbs uppercase">
+                           <a href="http://localhost:8080/">TRANG CHỦ</a>
+                           <span class="divider">/</span>
+                           <a href="http://localhost:8080/listproduct?id=1">SẢN PHẨM</a>
+                           <span class="divider">/ </span>
+                             THUÊ LỀU
+                       </nav>
+                </div>
+                <div class="flex-col">
+                    <p class="woocommerce-result-count hide-for-medium"> Hiển thị 1-12 của 88 kết quả</p>
+                        <form class="woocommerce-ordering" method="get">
+                            <select name="orderby" class="orderby" aria-label="Đơn hàng của shop">
+                                <option value="popularity" selected="selected">Thứ tự mặc định</option>
+                                <option value="date" selected="selected">Thứ tự mặc định</option>
+                                <option value="price" selected="selected">Thứ tự mặc định</option>
+                                <option value="price-desc" selected="selected">Thứ tự mặc định</option>
+                            </select>
+                            <input type="hidden" name="paged" value ="1">
+                        </form>
+            </div>
+                </div>
+                </div>
+            </div>
             <div class="col-sm-12 col-md-3 col-lg-3">
                 <div class="filter">
                     <label class="lb-chon-danhmuc">Chọn khoảng giá
@@ -94,6 +122,7 @@
     </div>
 </div>
 </div>
+
 <!-- footer -->
 <div id="footer"></div>
 </body>
